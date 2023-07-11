@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: blue;
+}
+
+button {
+  background-color: blue;
+  border-color: yellow;
+  color:aqua;
+  border-radius: 20px;
+  width: 10%;
+  cursor: pointer;
+}
