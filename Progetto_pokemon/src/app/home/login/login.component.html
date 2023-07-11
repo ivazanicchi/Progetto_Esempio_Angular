@@ -1,5 +1,5 @@
 
-<div class="card">
+<div class="card align-items-center" *ngIf="mostraLogin">
   <div class="grid">
       <div class="col-5 flex align-items-center justify-content-center">
           <div class="p-fluid">
@@ -14,13 +14,8 @@
               <p-button label="Login"></p-button>
           </div>
       </div>
-      <div class="col-2">
-          <p-divider layout="vertical">
-              <b>OR</b>
-          </p-divider>
-      </div>
       <div class="col-5 flex align-items-center justify-content-center">
-          <p-button label="Sign Up" icon="pi pi-user-plus" styleClass="p-button-success"></p-button>
+          <p-button label="Sign Up" icon="pi pi-user-plus" styleClass="p-button-success" (click)="onMostraRegistrazione()"></p-button>
       </div>
   </div>
 </div>
