@@ -12,4 +12,9 @@ export class CardPokemonService {
   getPokemon(){
     this.http.get("http://localhost:3000/pokemon").subscribe(posts=>{console.log(posts)})
   }
+
+  postPokemon(){
+    //this.http.post("")
+  }
+  
 }

@@ -1,9 +1,11 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, OnInit } from "@angular/core";
+import { Allenatore } from "../classes/Allenatore";
 
 @Injectable({providedIn:'root'})
 
 export class AllenatoriService implements OnInit{
+  allenatori:Array<Allenatore>=[]
 
 
   constructor(private http: HttpClient){}

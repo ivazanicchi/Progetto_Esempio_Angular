@@ -5,16 +5,27 @@
       "username": "Sebastian",
       "dataDiNascita": "1999-01-01",
       "email": "sebastian@codingthesmartway.com",
-      "password": "1234"
+      "password": "1234",
+      "rooster": []
     },
     {
       "id": 1,
       "username": "da",
-      "dataDiNascita": "2023-07-11",
+      "dataDiNascita": "2023-07-10",
+      "email": "da232@test.com",
+      "password": "13456",
+      "rooster": []
+    },
+    {
+      "id": 2,
+      "username": "ada",
+      "dataDiNascita": "2023-07-17",
       "email": "da@test.com",
-      "password": "123"
+      "password": "2345454",
+      "rooster": []
     }
   ],
+  
   "pokemon": [
     {
       "id": 1,

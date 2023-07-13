@@ -1,8 +1,8 @@
 import { Component, Injectable } from '@angular/core';
-import { HomeComponent } from '../home.component';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { AllenatoriService } from 'src/app/services/allenatori.service';
+import { HeaderComponent } from 'src/app/header/header.component';
 
 @Injectable({providedIn:'root'})
 
@@ -16,7 +16,9 @@ export class LoginComponent {
   errorMessage: boolean=false;
   usernameLogin:string="Username";
 
-  constructor(private allenatoriService: AllenatoriService, private router: Router){}
+  constructor(private allenatoriService: AllenatoriService,
+              private router: Router,
+              private headerComponent: HeaderComponent){}
 
   onLogin(form: NgForm) {
     console.log(form)
@@ -31,6 +33,8 @@ export class LoginComponent {
             this.usernameLogin=form.value.username;
             alert(`Benvenuto ${this.usernameLogin}`)
             this.router.navigate(['/pagina-iniziale'])
+
+
             //Aggiungere messaggio di benvenuto
 
           } else {

@@ -13,7 +13,7 @@
                   <label for="password">Password</label>
                   <input name="password" pInputText id="password" type="password" required ngModel/>
               </div>
-              <button>Login</button>
+              <button [disabled]="!fLogin.valid">Login</button>
 
             </form>
           </div>

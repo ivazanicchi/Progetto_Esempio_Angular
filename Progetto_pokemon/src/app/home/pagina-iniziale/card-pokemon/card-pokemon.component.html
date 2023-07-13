@@ -10,7 +10,7 @@
       <p>{{item.abilita.abilita2}}</p>
 
       <ng-template pTemplate="footer">
-          <p-button label="Aggiungi" icon="pi pi-check"></p-button>
+          <button class="btn btn-primary" icon="pi pi-check" (click)="aggiungiPokemon(item)">Aggiungi {{item.name}}</button>
           <!--<p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
       </ng-template>
   </p-card>

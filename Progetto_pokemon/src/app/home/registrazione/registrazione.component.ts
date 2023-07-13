@@ -1,5 +1,7 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Allenatore } from 'src/app/classes/Allenatore';
 import { AllenatoriService } from 'src/app/services/allenatori.service';
 
 
@@ -13,10 +15,15 @@ import { AllenatoriService } from 'src/app/services/allenatori.service';
 })
 
 export class RegistrazioneComponent {
+  @Input() id!: number;
   urlAllenatori:string="http://localhost:3000/allenatori";
+  allenatore=new Allenatore();
 
-  constructor(private allenatoriService: AllenatoriService) {}
 
+  constructor(private allenatoriService: AllenatoriService,
+              private router: Router) {}
+
+  /*
   onSubmit(form: NgForm){
     console.log(form.value)
     console.log(this.allenatoriService)
@@ -45,6 +52,21 @@ export class RegistrazioneComponent {
           }
         })
       });
+  }*/
+
+  onSubmit(form: NgForm) {
+    console.log(this.allenatore);
+
+    this.allenatoriService.allenatoriGet(this.urlAllenatori)
+      .subscribe((data: any) => {
+        console.log(data);
+      this.allenatore.id=data.length;
+      this.allenatoriService.allenatoriPost(this.urlAllenatori,this.allenatore)
+        .subscribe((response : any)=>{
+          console.log("Registrato con successo " + response.value);
+          this.router.navigate(['/pagina-iniziale'])
+        })
+    });
   }
 
 

@@ -1,5 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
+import { HeaderComponent } from 'src/app/header/header.component';
 
 @Injectable({providedIn:'root'})
 
@@ -10,7 +11,8 @@ import { LoginComponent } from '../login/login.component';
 })
 export class PaginaInizialeComponent {
 
-  constructor(public loginComponent: LoginComponent){}
+  constructor(public loginComponent: LoginComponent,
+              private headerComponent: HeaderComponent){}
 
 
 

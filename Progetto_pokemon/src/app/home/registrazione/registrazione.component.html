@@ -4,25 +4,25 @@
       <div class="p-fluid">
         <form action="" (ngSubmit)="onSubmit(f)" #f="ngForm">
           <div style="display: none;">
-            <input type="number" name="id" ngModel>
+            <input type="number" name="id" [(ngModel)]="allenatore.id" >
           </div>
           <div class="field">
             <label for="username">Username</label>
-            <input name="username" pInputText id="username" type="text" ngModel required/>
+            <input name="username" pInputText id="username" type="text" [(ngModel)]="allenatore.username" required/>
           </div>
           <div class="field">
             <label for="data">Data di Nascita</label>
-            <input name="data" pInputText id="username" type="date" ngModel required/>
+            <input name="data" pInputText id="username" type="date" [(ngModel)]="allenatore.dataDiNascita" required/>
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input name="email" pInputText id="username" type="email" ngModel required/>
+            <input name="email" pInputText id="username" type="email" [(ngModel)]="allenatore.email" required/>
           </div>
           <div class="field">
             <label for="password">Password</label>
-            <input name="password" pInputText id="password" type="password" ngModel required/>
+            <input name="password" pInputText id="password" type="password" [(ngModel)]="allenatore.password" required/>
           </div>
-          <button>Registra</button>
+          <button [disabled]="!f.valid">Registra</button>
           <button><a routerLink="/">Accedi</a></button>
         </form>
       </div>
