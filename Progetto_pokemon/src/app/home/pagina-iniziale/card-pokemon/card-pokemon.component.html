@@ -1,0 +1,18 @@
+<div id="container_card" >
+<div id="card_pokemon" class="card justify-content-center" *ngFor="let item of arrayPokemon">
+  <p-card  [style]="{ width: '360px' }">
+      <ng-template pTemplate="header">
+          <img alt="Card" src={{item.immage}} />
+      </ng-template>
+
+      <h3>{{item.name | uppercase }} </h3>
+      <p>{{item.abilita.abilita1}}</p>
+      <p>{{item.abilita.abilita2}}</p>
+
+      <ng-template pTemplate="footer">
+          <p-button label="Aggiungi" icon="pi pi-check"></p-button>
+          <!--<p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
+      </ng-template>
+  </p-card>
+</div>
+</div>

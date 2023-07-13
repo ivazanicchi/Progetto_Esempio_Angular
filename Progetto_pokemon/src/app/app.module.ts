@@ -12,9 +12,12 @@ import {ButtonModule} from 'primeng/button';
 import { DividerModule } from "primeng/divider";
 import { HomeComponent } from './home/home.component';
 import { RegistrazioneComponent } from './home/registrazione/registrazione.component';
-import { CardPokemonComponent } from './card-pokemon/card-pokemon.component';
+import { CardPokemonComponent } from './home/pagina-iniziale/card-pokemon/card-pokemon.component';
 import { CardModule } from 'primeng/card';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { PaginaInizialeComponent } from './home/pagina-iniziale/pagina-iniziale.component';
+import { RoosterComponent } from './home/pagina-iniziale/rooster/rooster.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     RegistrazioneComponent,
-    CardPokemonComponent
+    CardPokemonComponent,
+    PaginaInizialeComponent,
+    RoosterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     DividerModule,
     CardModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

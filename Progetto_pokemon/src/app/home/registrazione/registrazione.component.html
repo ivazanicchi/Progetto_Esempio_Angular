@@ -1,24 +1,30 @@
-<div class="card align-items-center" *ngIf="mostraRegistrazione">
+<div class="card align-items-center">
   <div class="grid">
     <div class="col-5 flex align-items-center justify-content-center">
       <div class="p-fluid">
-        <div class="field">
-          <label for="username">Username</label>
-          <input pInputText id="username" type="text" />
-        </div>
-        <div class="field">
-          <label for="data">Data di Nascita</label>
-          <input pInputText id="username" type="date" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input pInputText id="username" type="email" />
-        </div>
-        <div class="field">
-          <label for="password">Password</label>
-          <input pInputText id="password" type="password" />
-        </div>
-        <p-button label="Register"></p-button>
+        <form action="" (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div style="display: none;">
+            <input type="number" name="id" ngModel>
+          </div>
+          <div class="field">
+            <label for="username">Username</label>
+            <input name="username" pInputText id="username" type="text" ngModel required/>
+          </div>
+          <div class="field">
+            <label for="data">Data di Nascita</label>
+            <input name="data" pInputText id="username" type="date" ngModel required/>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input name="email" pInputText id="username" type="email" ngModel required/>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input name="password" pInputText id="password" type="password" ngModel required/>
+          </div>
+          <button>Registra</button>
+          <button><a routerLink="/">Accedi</a></button>
+        </form>
       </div>
     </div>
   </div>

@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { AppComponent } from '../app.component';
+
+@Injectable({providedIn:'root'})
 
 @Component({
   selector: 'app-home',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  mostraLogin:boolean=true;
+  mostraRegistrazione:boolean=false;
+
+  constructor(private appComponent: AppComponent){}
+
+
 
 }
