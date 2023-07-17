@@ -1,7 +1,7 @@
 <div id="container">
   <div>
     <button class="btn btn-primary">
-      <a routerLink="/card-pokemon">Crea la tua squadra</a>
+      <a routerLink="card-pokemon" (click)="onMostraCardPokemon()">Crea la tua squadra</a>
     </button>
   </div>
   <div>
@@ -9,7 +9,10 @@
       <a routerLink="/rooster">Rooster</a></button>
   </div>
   <div>
-    <button><a routerLink="/">Log Out</a></button>
+    <button><a (click)="logOut()">Log Out</a></button>
   </div>
 </div>
-<h1>{{ loginComponent.usernameLogin }}</h1>
+<h1>Benvenuto {{user}}</h1>
+
+<app-card-pokemon *ngIf="mostraCard"></app-card-pokemon>
+

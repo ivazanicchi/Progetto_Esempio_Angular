@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppComponent {
   title = 'Progetto_pokemon';
-  mostraCard:boolean=false;
 
   constructor(){}
 

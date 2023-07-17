@@ -5,13 +5,16 @@ import { RegistrazioneComponent } from './home/registrazione/registrazione.compo
 import { CardPokemonComponent } from './home/pagina-iniziale/card-pokemon/card-pokemon.component';
 import { PaginaInizialeComponent } from './home/pagina-iniziale/pagina-iniziale.component';
 import { RoosterComponent } from './home/pagina-iniziale/rooster/rooster.component';
+import { AuthenticationGuard } from './services/guards/authentication.guard';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'pagina-iniziale', component: PaginaInizialeComponent},
+  {path: 'pagina-iniziale', component: PaginaInizialeComponent, canActivate: [AuthenticationGuard],
+    children: [
+      {path: 'card-pokemon', component: CardPokemonComponent},
+      {path: 'rooster', component: RoosterComponent}
+    ]},
   {path: 'registrazione', component: RegistrazioneComponent},
-  {path: 'card-pokemon', component: CardPokemonComponent},
-  {path: 'rooster', component: RoosterComponent}
 ];
 
 @NgModule({

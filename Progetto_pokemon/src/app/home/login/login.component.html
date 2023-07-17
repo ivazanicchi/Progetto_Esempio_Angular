@@ -6,7 +6,7 @@
             <form (ngSubmit)="onLogin(fLogin)" #fLogin="ngForm">
               <div class="field">
                   <label for="username">Username</label>
-                  <input name="username" pInputText id="username" type="text" required ngModel/>
+                  <input name="username" pInputText id="username" type="text" required [(ngModel)]="username"/>
 
               </div>
               <div class="field">
@@ -20,7 +20,7 @@
       </div>
       <div class="col-5 flex align-items-center justify-content-center">
           <p-button icon="pi pi-user-plus" styleClass="p-button-success"><a routerLink="/registrazione">Sign Up</a></p-button>
-          <span style="color: red;" *ngIf="errorMessage">Password o Email errati</span>
+          <span style="color: red;" *ngIf="errorMessage">Password o Username errati</span>
     </div>
   </div>
 </div>

@@ -6,7 +6,7 @@
       "dataDiNascita": "1999-01-01",
       "email": "sebastian@codingthesmartway.com",
       "password": "1234",
-      "rooster": []
+      "rooster": [{"ciao": "ciao"}]
     },
     {
       "id": 1,
@@ -23,9 +23,16 @@
       "email": "da@test.com",
       "password": "2345454",
       "rooster": []
+    },
+    {
+      "id": 3,
+      "username": "dom",
+      "dataDiNascita": "2023-07-02",
+      "email": "da@test.com",
+      "password": "0000",
+      "rooster": []
     }
   ],
-  
   "pokemon": [
     {
       "id": 1,
