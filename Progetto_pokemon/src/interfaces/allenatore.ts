@@ -4,5 +4,5 @@ export interface IAllenatore {
   dataDiNascita: string;
   email: string;
   password: string;
-  rooster: any[] | null | undefined;
+  rooster: {}[] | null | undefined;
 }

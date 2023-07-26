@@ -17,6 +17,7 @@ export const ACCESS_TOKEN = 'demo-access-store';
 export class PaginaInizialeComponent implements OnInit{
   user?: string;
   mostraCard:boolean=false;
+  mostraRooster:boolean=false;
 
   private authentication?: Authentication
 
@@ -32,6 +33,12 @@ export class PaginaInizialeComponent implements OnInit{
 
   onMostraCardPokemon(){
     this.mostraCard=true;
+    this.mostraRooster=false;
+  }
+
+  onMostraRooster(){
+    this.mostraRooster=true;
+    this.mostraCard=false;
   }
 
   logOut(){

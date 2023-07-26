@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PaginaInizialeComponent } from './home/pagina-iniziale/pagina-iniziale.component';
 import { RoosterComponent } from './home/pagina-iniziale/rooster/rooster.component';
+import { aggiungiPokemon } from './store/card-pokemon.reducer';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { RoosterComponent } from './home/pagina-iniziale/rooster/rooster.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({
+      aggiungi: aggiungiPokemon,
+    }),
     CommonModule,
     ButtonModule,
     PasswordModule,

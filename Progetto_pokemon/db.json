@@ -6,7 +6,7 @@
       "dataDiNascita": "1999-01-01",
       "email": "sebastian@codingthesmartway.com",
       "password": "1234",
-      "rooster": [{"ciao": "ciao"}]
+      "rooster": []
     },
     {
       "id": 1,

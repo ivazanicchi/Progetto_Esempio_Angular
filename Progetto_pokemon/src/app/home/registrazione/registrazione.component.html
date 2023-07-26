@@ -22,8 +22,8 @@
             <label for="password">Password</label>
             <input name="password" pInputText id="password" type="password" [(ngModel)]="allenatore.password" required/>
           </div>
-          <button [disabled]="!f.valid">Registra</button>
-          <button><a routerLink="/">Accedi</a></button>
+          <button id="button-registra" [disabled]="!f.valid">Registra</button>
+          <button id="button-accedi"><a routerLink="/">Accedi</a></button>
         </form>
       </div>
     </div>

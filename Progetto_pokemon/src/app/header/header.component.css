@@ -3,10 +3,19 @@
   justify-content: space-between;
 }
 
+nav {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
 a {
   text-decoration: none;
-  font-size: 20px;
-  color: blue;
+  font-size: 26px;
+  color: #ffcc03;
+  text-shadow: 0.1em 0.1em 0 blue,
+    -0.1em -0.1em 0 blue,
+    -0.1em 0.1em 0 blue;
+  font-family: 'Pokemon Solid', sans-serif;
 }
 
 button {

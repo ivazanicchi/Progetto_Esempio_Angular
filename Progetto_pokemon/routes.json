@@ -1,0 +1,5 @@
+{
+  "/api/allenatori": "/allenatori",
+  "/api/allenatori/:id": "/allenatori/:id",
+  "/api/allenatori/:id/rooster": "/allenatori/:id/rooster"
+}

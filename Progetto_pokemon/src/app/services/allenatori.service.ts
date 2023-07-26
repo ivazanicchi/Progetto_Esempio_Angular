@@ -20,4 +20,12 @@ export class AllenatoriService implements OnInit{
   allenatoriPost(url: string, body: {}){
     return this.http.post(url,body)
   }
+
+  pokemonPut(url: string, body: {}){
+    return this.http.put(url, body)
+  }
+
+  pokemonPatch(url: string, body: {}) {
+    return this.http.patch(url, body)
+  }
 }

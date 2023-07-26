@@ -13,13 +13,13 @@
                   <label for="password">Password</label>
                   <input name="password" pInputText id="password" type="password" required ngModel/>
               </div>
-              <button [disabled]="!fLogin.valid">Login</button>
+              <button id="button-login" [disabled]="!fLogin.valid">Login</button>
 
             </form>
           </div>
       </div>
       <div class="col-5 flex align-items-center justify-content-center">
-          <p-button icon="pi pi-user-plus" styleClass="p-button-success"><a routerLink="/registrazione">Sign Up</a></p-button>
+          <button id="button-sign-up"><a routerLink="/registrazione">Sign Up</a></button>
           <span style="color: red;" *ngIf="errorMessage">Password o Username errati</span>
     </div>
   </div>

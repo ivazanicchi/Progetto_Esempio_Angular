@@ -1,0 +1,21 @@
+#button-login {
+  width: 100%;
+  background-color: green;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 68, 0);
+  margin: 4px auto;
+  color: white;
+}
+
+#button-sign-up {
+  width: 100%;
+  background-color: red;
+  border-radius: 20px;
+  margin: 1rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+

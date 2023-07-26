@@ -7,3 +7,21 @@
 #card_pokemon {
   margin: 20px 0;
 }
+
+li {
+  list-style: none;
+  margin: 5px;
+}
+
+#button-elimina-pokemon {
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+}
+
+#button-salva-pokemon {
+  margin-left: 20px;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+}

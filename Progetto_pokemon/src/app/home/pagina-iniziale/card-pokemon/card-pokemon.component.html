@@ -1,18 +1,39 @@
-<div id="container_card" >
-<div id="card_pokemon" class="card justify-content-center" *ngFor="let item of arrayPokemon">
-  <p-card  [style]="{ width: '360px' }">
+<div *ngIf="mostraListaPokemonSelezionati">
+  <div>
+    <ul>
+      <li *ngFor="let item of arrayPokemonSelezionati">
+        {{ item.name | uppercase }} <button id="button-elimina-pokemon" (click)="eliminaPokemonSelezionato(item)">Elimina</button>
+      </li>
+    </ul>
+  </div>
+  <button id="button-salva-pokemon">Salva</button>
+</div>
+
+<div id="container_card">
+  <div
+    id="card_pokemon"
+    class="card justify-content-center"
+    *ngFor="let item of arrayPokemon"
+  >
+    <p-card [style]="{ width: '360px' }">
       <ng-template pTemplate="header">
-          <img alt="Card" src={{item.immage}} />
+        <img alt="Card" src="{{ item.immage }}" />
       </ng-template>
 
-      <h3>{{item.name | uppercase }} </h3>
-      <p>{{item.abilita.abilita1}}</p>
-      <p>{{item.abilita.abilita2}}</p>
+      <h3>{{ item.name | uppercase }}</h3>
+      <p>{{ item.abilita.abilita1 }}</p>
+      <p>{{ item.abilita.abilita2 }}</p>
 
       <ng-template pTemplate="footer">
-          <button class="btn btn-primary" icon="pi pi-check" (click)="aggiungiPokemon(item)">Aggiungi {{item.name}}</button>
-          <!--<p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
+        <button
+          class="btn btn-primary"
+          icon="pi pi-check"
+          (click)="aggiungiPokemon(item)"
+        >
+          Aggiungi {{ item.name }}
+        </button>
+        <!--<p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
       </ng-template>
-  </p-card>
-</div>
+    </p-card>
+  </div>
 </div>

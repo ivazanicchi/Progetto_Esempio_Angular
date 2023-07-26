@@ -6,7 +6,7 @@ export class Allenatore implements IAllenatore {
   dataDiNascita: string;
   email: string;
   password: string;
-  rooster: any[] | null | undefined;
+  rooster: {}[] | null | undefined;
 
   constructor(){
     this.id = 0;
