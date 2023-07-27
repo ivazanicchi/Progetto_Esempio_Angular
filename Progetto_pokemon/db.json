@@ -6,7 +6,44 @@
       "dataDiNascita": "1999-01-01",
       "email": "sebastian@codingthesmartway.com",
       "password": "1234",
-      "rooster": []
+      "rooster": [
+        {
+          "id": 3,
+          "name": "venusaur",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+          "abilita": {
+            "abilita1": "Fiortempesta",
+            "abilita2": "Frustata"
+          }
+        },
+        {
+          "id": 2,
+          "name": "ivysaur",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+          "abilita": {
+            "abilita1": "Ruggito",
+            "abilita2": "Crescita"
+          }
+        },
+        {
+          "id": 1,
+          "name": "bulbasaur",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+          "abilita": {
+            "abilita1": "Erbaiuto",
+            "abilita2": "Clorofilla"
+          }
+        },
+        {
+          "id": 7,
+          "name": "squirtle",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+          "abilita": {
+            "abilita1": "Azione",
+            "abilita2": "Colpocoda"
+          }
+        }
+      ]
     },
     {
       "id": 1,
@@ -31,6 +68,42 @@
       "email": "da@test.com",
       "password": "0000",
       "rooster": []
+    },
+    {
+      "id": 4,
+      "username": "Domenico",
+      "dataDiNascita": "1997-11-02",
+      "email": "domenico@test.com",
+      "password": "domenico",
+      "rooster": [
+        {
+          "id": 6,
+          "name": "charizard",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+          "abilita": {
+            "abilita1": "Lanciafiamme",
+            "abilita2": "Ondacalda"
+          }
+        },
+        {
+          "id": 9,
+          "name": "blastoise",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
+          "abilita": {
+            "abilita1": "Protezione",
+            "abilita2": "Pioggiadanza"
+          }
+        },
+        {
+          "id": 3,
+          "name": "venusaur",
+          "immage": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+          "abilita": {
+            "abilita1": "Fiortempesta",
+            "abilita2": "Frustata"
+          }
+        }
+      ]
     }
   ],
   "pokemon": [

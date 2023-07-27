@@ -1,0 +1,9 @@
+#container_card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#card_pokemon {
+  margin: 20px 0;
+}

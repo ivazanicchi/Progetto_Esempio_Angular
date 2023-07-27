@@ -8,6 +8,11 @@
   margin: 20px 0;
 }
 
+#messaggio-salva {
+  color: green;
+  font-size: 20px;
+}
+
 li {
   list-style: none;
   margin: 5px;

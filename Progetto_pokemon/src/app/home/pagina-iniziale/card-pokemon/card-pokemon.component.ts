@@ -1,7 +1,6 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
-import { Allenatore } from 'src/app/classes/Allenatore';
 import { AllenatoriService } from 'src/app/services/allenatori.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
@@ -15,10 +14,13 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class CardPokemonComponent implements OnInit{
   urlPokemon:string="http://localhost:3000/pokemon";
   urlAllenatoriRooster: string ="http://localhost:3000/allenatori/"
+  urlAllenatori: string ="http://localhost:3000/allenatori"
   arrayPokemon:any;
   utenteLoggato:any;
   mostraListaPokemonSelezionati: boolean=false;
   arrayPokemonSelezionati: any[]=[];
+  mostraMessaggioSalva: boolean=false;
+  disabilitaBottone:boolean=false;
 
   constructor(private http: HttpClient,
               private allenatoriService: AllenatoriService,
@@ -38,7 +40,7 @@ export class CardPokemonComponent implements OnInit{
     if(this.arrayPokemonSelezionati.length<6){
       this.mostraListaPokemonSelezionati=true;
       this.arrayPokemonSelezionati.push(pokemon)
-      console.log(this.arrayPokemonSelezionati)
+
       return this.arrayPokemonSelezionati
     } else {
       alert("Hai raggiunto il limite massimo di pokemon da selezionare")
@@ -52,9 +54,49 @@ export class CardPokemonComponent implements OnInit{
     if(this.arrayPokemonSelezionati.length==0) {
       this.mostraListaPokemonSelezionati=false;
     }
-    
+
     return this.arrayPokemonSelezionati
   }
+
+
+
+  //UNICA SOLUZIONE PER L'INIVIO DEI POKEMON AL ROOSTER E' IL PUT
+  //ANDANDO A MODIFICARE L'INTERA CLASSE DELL'ALLENATORE
+  putPokemon(url: string, body: {}):any{
+    return this.http.put(url, body)
+  }
+
+
+  aggiungiPokemonAlRooster(){
+    this.utenteLoggato=this.authenticationService.getAuthentication();
+    console.log(this.utenteLoggato)
+    this.allenatoriService.allenatoriGet("http://localhost:3000/allenatori")
+      .subscribe((data:any)=>{console.log(JSON.stringify(data[0].rooster));
+        console.log(data)
+        for(let i=0; i < data.length; i++) {
+          if (this.utenteLoggato.username == data[i].username){
+            data[i].rooster.push(...this.arrayPokemonSelezionati)
+
+            //console.log(data[i].rooster)
+            //console.log(data)
+            //console.log(data[i].rooster.length)
+            if (data[i].rooster.length < 7) {
+              this.putPokemon(this.urlAllenatoriRooster+[i], data[i])
+              .subscribe((response:any)=> {console.log(response)});
+
+              this.mostraMessaggioSalva=true;
+              this.arrayPokemonSelezionati.splice(6)
+              console.log(this.arrayPokemonSelezionati)
+              this.mostraListaPokemonSelezionati=false;
+            } else {
+                alert("Elimina qualche pokemon dal rooster per poterne aggiungere di nuovi")
+            }
+
+        }
+        }
+      }
+      )
+    }
 
   /*
   aggiungiPokemon(pokemon:any){

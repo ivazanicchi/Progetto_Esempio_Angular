@@ -1,0 +1,28 @@
+<div id="container_card">
+  <div
+    id="card_pokemon"
+    class="card justify-content-center"
+    *ngFor="let item of arrayPokemonRooster"
+  >
+    <p-card [style]="{ width: '260px' }">
+      <ng-template pTemplate="header">
+        <img alt="Card" src="{{ item.immage }}" />
+      </ng-template>
+
+      <h3>{{ item.name | uppercase }}</h3>
+      <p>{{ item.abilita.abilita1 }}</p>
+      <p>{{ item.abilita.abilita2 }}</p>
+
+      <ng-template pTemplate="footer">
+        <button
+          class="btn btn-danger"
+          icon="pi pi-check"
+          (click)="eliminaPokemonSelezionato(item)"
+        ><!--Aggiungere bottone modifica/elimina-->
+          Elimina {{ item.name }}
+        </button>
+        <!--<p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>-->
+      </ng-template>
+    </p-card>
+  </div>
+</div>

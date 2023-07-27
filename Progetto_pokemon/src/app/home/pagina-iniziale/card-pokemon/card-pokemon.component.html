@@ -6,8 +6,10 @@
       </li>
     </ul>
   </div>
-  <button id="button-salva-pokemon">Salva</button>
+  <button id="button-salva-pokemon" (click)="aggiungiPokemonAlRooster()">Salva</button>
 </div>
+
+<p id="messaggio-salva" *ngIf="mostraMessaggioSalva">Hai aggiunto i pokemon al tuo rooster</p>
 
 <div id="container_card">
   <div
@@ -29,6 +31,7 @@
           class="btn btn-primary"
           icon="pi pi-check"
           (click)="aggiungiPokemon(item)"
+
         >
           Aggiungi {{ item.name }}
         </button>
